@@ -1,7 +1,16 @@
-﻿@{
+﻿@model IEnumerable<MVC5.ViewModel.ViewInfoModel>
+
+@{
     ViewBag.Title = "About";
+    var r=ViewBag.res;
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<p>
+
+    @foreach (var item in Model) 
+    {
+   
+    }
+</p>

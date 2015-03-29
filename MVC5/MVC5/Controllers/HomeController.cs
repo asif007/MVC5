@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVC5.Models;
+using MVC5.ViewModel;
 namespace MVC5.Controllers
 {
     public class HomeController : Controller
@@ -16,9 +17,20 @@ namespace MVC5.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            ViewInfoModel rrr=new ViewInfoModel();
+            //rrr.emp = (from r in db.Employees
+            //           join r2 in db.Customers
+            //               on r.empid equals r2.custid
+            //           select new
+            //           {
+            //               r.address,
+            //               r.birthdate,
+            //               firstname = (r.firstname ?? " ") + " " + (r.lastname ?? " "),
+            //               r2.country,
+            //               r2.contactname
+            //           });
+           // ViewBag.res=model;
+         return View(rrr);
         }
         public ActionResult Aboutdd()
         {
