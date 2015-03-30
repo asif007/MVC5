@@ -48,19 +48,19 @@ namespace MVC5.Controllers
         public PartialViewResult All()
         {
             List<Employee> emp = db.Employees.ToList();
-            return PartialView("_AjaxPartialView", emp);
+            return PartialView("AjaxPartialView", emp);
         }
         public PartialViewResult Top3()
         {
             List<Employee> emp = new List<Employee>();
             emp = db.Employees.OrderBy(r => r.empid).Take(3).ToList();
-            return PartialView("_AjaxPartialView", emp);
+            return PartialView("AjaxPartialView", emp);
         }
         public PartialViewResult Bottom3()
         {
             List<Employee> emp = new List<Employee>();
             emp = db.Employees.OrderByDescending(r => r.empid).Take(3).ToList();
-            return PartialView("_AjaxPartialView", emp);
+            return PartialView("AjaxPartialView", emp);
         }
     }
 }

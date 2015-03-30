@@ -1,16 +1,13 @@
-﻿@model IEnumerable<MVC5.ViewModel.ViewInfoModel>
+﻿<h2>this is he</h2>
 
-@{
-    ViewBag.Title = "About";
-    var r=ViewBag.res;
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
-
-<p>
-
-    @foreach (var item in Model) 
-    {
-   
-    }
-</p>
+<div ng-app="app">
+    <div ng-controller="First">
+       
+        <h2>{{firstname+" "+lastname}}</h2>
+    </div>
+    <div ng-controller="Second">
+     
+      
+        <h2>{{time()}}</h2>
+    </div>
+</div>

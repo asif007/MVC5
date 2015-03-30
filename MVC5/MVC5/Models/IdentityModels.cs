@@ -12,6 +12,7 @@ namespace MVC5.Models
         public ApplicationDbContext()
             : base("DefaultConnection")
         {
+
         }
     }
 }
