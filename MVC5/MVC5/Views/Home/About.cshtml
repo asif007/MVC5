@@ -1,6 +1,6 @@
 ﻿<h2>this is he</h2>
 
-<div ng-app="app">
+<div >
     <div ng-controller="First">
        
         <h2>{{firstname+" "+lastname}}</h2>
@@ -11,3 +11,32 @@
         <h2>{{time()}}</h2>
     </div>
 </div>
+ <div ng-controller="products as p" >
+     <p>{{p.product.Name}}</p>
+     <p>{{p.product.Price}}</p>
+     <p>{{p.product.Item}}</p>
+     <button ng-show="p.product.Sold">Add cart</button>
+ </div>
+<p>selected function </p>
+<section ng-controller="PanelController as panel">
+    <ul class="nav nav-pills">
+        <li ng-class="{active:panel.isSelected(1)}">
+            <button ng-click="panel.selectTab(1)">Description</button>   
+         </li>
+        <li ng-class="{active:panel.isSelected(2)}">
+            <button ng-click="panel.selectTab(2)">Specification</button>
+    </li>
+        <li ng-class="{active:panel.isSelected(3)}">
+            <button ng-click="panel.selectTab(3)">Reviews</button>
+</li>
+    </ul>
+    <div class="panel" ng-show="panel.isSelected(1)">
+        <h4>Description</h4>
+    </div>
+    <div class="panel" ng-show="panel.isSelected(2)">
+        <h4>Specification</h4>
+    </div>
+    <div class="panel" ng-show="panel.isSelected(3)">
+        <h4>Reviews</h4>
+    </div>
+</section>
