@@ -44,6 +44,9 @@
     </div>
     <input type="checkbox" id="btn"/>
 </div>
+<input type="checkbox" id="something" />
+ <label id="lbl" >value60</label><br/>
+<input type="number" id="num"/>
 
 @section Scripts{
 
@@ -58,20 +61,33 @@
         .you {
             display: none;
         }
+        #num {
+          display:none;
+        }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
             $("#btn").click(function () {
                 $("#show").toggle();
             });
-            //$("#btn").click(function () {
-            //    $("#show").hide();
-            //});
+          
         });
         function results() {
-            //  $("#asif").cl
+           
             $(".you").show().animate({ fontSize: "2em", color: "red" }, 400);
             //animate({ fontSize: "2em", color: "red" }, 400);
         }
+        $("#something").click(function () {
+            if ($(this).is(':checked')) {
+                $("#num").show();
+                $("#lbl").hide();
+            }
+            else {
+                $("#num").hide();
+                $("#lbl").show();
+            }
+
+        });
+
     </script>
 }
