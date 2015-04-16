@@ -42,11 +42,11 @@
         name:<input type="text" name="names" />
         pass:<input type="password" name="passwords" />
     </div>
-    <input type="checkbox" id="btn"/>
+    <input type="checkbox" id="btn" />
 </div>
 <input type="checkbox" id="something" />
- <label id="lbl" >value60</label><br/>
-<input type="number" id="num"/>
+<label id="lbl">value60</label><br />
+<input type="number" id="num" />
 
 @section Scripts{
 
@@ -61,8 +61,9 @@
         .you {
             display: none;
         }
+
         #num {
-          display:none;
+            display: none;
         }
     </style>
     <script type="text/javascript">
@@ -70,10 +71,10 @@
             $("#btn").click(function () {
                 $("#show").toggle();
             });
-          
+
         });
         function results() {
-           
+
             $(".you").show().animate({ fontSize: "2em", color: "red" }, 400);
             //animate({ fontSize: "2em", color: "red" }, 400);
         }
