@@ -1,0 +1,39 @@
+﻿@model MVC5.Models.Employee
+
+@{
+    ViewBag.Title = "DisplayImage";
+}
+
+<h2>DisplayImage</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+           <img src='@Url.Content("~/Images/"+@Model.Photo)' alt="@Model.AlternateText"/>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlternateText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlternateText)
+        </dd>
+
+       
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.empid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
