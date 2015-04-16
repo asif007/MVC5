@@ -26,6 +26,7 @@ namespace MVC5
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/angular.min.js",
+                      "~/Scripts/angular-route.min.js",
                       "~/Scripts/myangular.js",
                       "~/Scripts/respond.js"));
 

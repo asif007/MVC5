@@ -15,6 +15,17 @@ namespace MVC5.Controllers
             return View();
         }
 
+        public ActionResult Projection()
+        {
+            var projection = db.Employees.Where(p => p.empid > 5);
+           
+            return View(projection);
+        }
+        public ActionResult DisplayImage()
+        {
+            Employee model = db.Employees.Single(r => r.empid == 3);
+            return View(model);
+        }
         public ActionResult About()
         {
             ViewInfoModel rrr=new ViewInfoModel();
