@@ -34,6 +34,8 @@ namespace MVC5.Models
         public string country { get; set; }
         public string phone { get; set; }
         public Nullable<int> mgrid { get; set; }
+        public string Photo { get; set; }
+        public string AlternateText { get; set; }
     
         public virtual ICollection<Employee> Employees1 { get; set; }
         public virtual Employee Employee1 { get; set; }
