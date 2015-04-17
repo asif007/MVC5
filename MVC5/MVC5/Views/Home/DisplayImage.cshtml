@@ -1,4 +1,4 @@
-﻿@model MVC5.Models.Employee
+﻿@model IEnumerable<MVC5.Models.Employee>
 
 @{
     ViewBag.Title = "DisplayImage";
@@ -16,24 +16,16 @@
         <dt>
             @Html.DisplayNameFor(model => model.Photo)
         </dt>
-
+        @foreach (var item in Model) { 
         <dd>
-           <img src='@Url.Content("~/Images/"+@Model.Photo)' alt="@Model.AlternateText"/>
+           <img src="@Url.Content("~/Images/"+item.Photo)"/>
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AlternateText)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AlternateText)
-        </dd>
+            @Html.DisplayFor(model=>item.lastname)
+       
+        }
 
        
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.empid }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
