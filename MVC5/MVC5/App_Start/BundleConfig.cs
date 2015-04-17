@@ -37,7 +37,7 @@ namespace MVC5
             bundles.Add(new StyleBundle("~/Content/kendo/css").Include(
             "~/Content/kendo/kendo.common-bootstrap.min.css",
             "~/Content/kendo/kendo.bootstrap.min.css"));
-            bundles.Add(new StyleBundle("~/Content/themes/base/Css").Include(
+            bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
             "~/Content/themes/base/accordion.css",
             "~/Content/themes/base/all.css",
             "~/Content/themes/base/autocomplete.css",
