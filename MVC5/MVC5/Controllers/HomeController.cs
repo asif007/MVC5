@@ -23,8 +23,9 @@ namespace MVC5.Controllers
         }
         public ActionResult DisplayImage()
         {
-            Employee model = db.Employees.Single(r => r.empid == 3);
-            return View(model);
+            IEnumerable<Employee> model = new List<Employee>();
+             model = (from r in db.Employees where(r.empid<4) select r).ToList();
+             return View(model);
         }
         public ActionResult About()
         {
