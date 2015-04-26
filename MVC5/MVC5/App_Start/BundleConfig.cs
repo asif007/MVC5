@@ -26,12 +26,18 @@ namespace MVC5
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/angular.min.js",
+                       "~/Scripts/codeacademy.js",
                       "~/Scripts/angular-route.min.js",
                       "~/Scripts/myangular.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/codeacademy.css",
+                      "~/Content/kendo/kendo.common.min.css",
+                      "~/Content/kendo/kendo.dataviz.min.css",
+                      "~/Content/kendo/kendo.default.min.css",
+                      "~/Content/kendo/kendo.dataviz.default.min.css",
                       "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/kendo/css").Include(
