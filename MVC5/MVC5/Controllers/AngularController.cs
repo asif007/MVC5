@@ -12,6 +12,7 @@ namespace MVC5.Controllers
      
         public ActionResult Index()
         {
+            ViewModel = "";
             return View();
         }
         public JsonResult GetAllDataFromTable()
